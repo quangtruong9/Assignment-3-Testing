@@ -11,20 +11,15 @@ def main():
     suite = unittest.makeSuite(PythonOrgSearch)
     test(suite)
 
-    #test log in
-    # from LogIn import PythonOrgSearch
-    # suite = unittest.makeSuite(PythonOrgSearch)
-    # test(suite)   
+    #test jobs search
+    from JobSearch import PythonOrgSearch
+    suite = unittest.makeSuite(PythonOrgSearch)
+    test(suite)
 
-    #test register
-    # from Register import PythonOrgSearch
-    # suite = unittest.makeSuite(PythonOrgSearch)
-    # test(suite)   
-
-    # from JobSearch import PythonOrgSearch
-    # suite = unittest.makeSuite(PythonOrgSearch)
-    # test(suite)
-
+    #test CV
+    from CV import PythonOrgSearch
+    suite = unittest.makeSuite(PythonOrgSearch)
+    test(suite)
 
 def test(suite):
     from pprint import pprint
