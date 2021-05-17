@@ -6,7 +6,6 @@ import re
 import hashlib
 import urllib
 from time import sleep as delay
-import pywinauto
 import pygetwindow as gw
 import pyautogui
 
@@ -96,7 +95,7 @@ class PythonOrgSearch(unittest.TestCase):
         except:
             return False
 
-    def test_TC_PM_001(self):
+    def _test_TC_PM_001(self):
         """ Update basic info """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -129,7 +128,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-001"))
 
-    def test_TC_PM_002(self):
+    def _test_TC_PM_002(self):
         """ Update ava profile with IMG file """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -159,15 +158,13 @@ class PythonOrgSearch(unittest.TestCase):
             actual = True
         else:
             "Failed"
-            # print("failed")
-
         
         expect = True
         result = True if (actual == expect) else False
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-002"))
 
 
-    def test_TC_PM_003(self):
+    def _test_TC_PM_003(self):
         """ Update ava profile with EXE file """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -204,7 +201,7 @@ class PythonOrgSearch(unittest.TestCase):
         result = True if (actual == expect) else False
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-003"))
 
-    def test_TC_PM_004(self):
+    def _test_TC_PM_004(self):
         """ Right contact info """
         self.driver.get("https://www.vietnamworks.com/my-profile")
         WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((
@@ -270,9 +267,9 @@ class PythonOrgSearch(unittest.TestCase):
         expect = True
         result = True if (actual == expect) else False
 
-        self.assertTrue(TestUtil.checkTestcase(True,True,"TC-PM-004"))
+        self.assertTrue(TestUtil.checkTestcase(expect,True,"TC-PM-004"))
 
-    def test_TC_PM_005(self):
+    def _test_TC_PM_005(self):
         """ Wrong phone number """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -341,7 +338,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-005"))
 
-    def test_TC_PM_006(self):
+    def _test_TC_PM_006(self):
         """ Wrong date-of-birth """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -410,7 +407,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-006"))
 
-    def test_TC_PM_007(self):
+    def _test_TC_PM_007(self):
         """ Foreigner in Vietnam """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -479,7 +476,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-007"))
 
-    def test_TC_PM_008(self):
+    def _test_TC_PM_008(self):
         """ Empty Nationality """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -621,7 +618,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-009"))
 
-    def test_TC_PM_010(self):
+    def _test_TC_PM_010(self):
         """ Invalid address """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -691,7 +688,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-010"))
 
-    def test_TC_PM_011(self):
+    def _test_TC_PM_011(self):
         """ Empty district """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -764,7 +761,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-011"))
 
-    def test_TC_PM_012(self):
+    def _test_TC_PM_012(self):
         """ Long phone number """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -835,7 +832,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-012"))
 
-    def test_TC_PM_013(self):
+    def _test_TC_PM_013(self):
         """ Invalid phone number with alphabet characters """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -906,7 +903,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-013"))
 
-    def test_TC_PM_014(self):
+    def _test_TC_PM_014(self):
         """  """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -937,7 +934,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-014"))
 
-    def test_TC_PM_015(self):
+    def _test_TC_PM_015(self):
         """  """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -971,7 +968,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-015"))
 
-    def test_TC_PM_016(self):
+    def _test_TC_PM_016(self):
         """ Long sumary characters """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -1005,7 +1002,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-016"))
 
-    def test_TC_PM_017(self):
+    def _test_TC_PM_017(self):
         """ Another sumary """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -1039,7 +1036,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-017"))
 
-    def test_TC_PM_018(self):
+    def _test_TC_PM_018(self):
         """  """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -1086,7 +1083,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-018"))
 
-    def test_TC_PM_019(self):
+    def _test_TC_PM_019(self):
         """  """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -1121,7 +1118,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-019"))
 
-    def test_TC_PM_020(self):
+    def _test_TC_PM_020(self):
         """  """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -1156,7 +1153,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-020"))
 
-    def test_TC_PM_021(self):
+    def _test_TC_PM_021(self):
         """  """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -1191,7 +1188,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-021"))
 
-    def test_TC_PM_022(self):
+    def _test_TC_PM_022(self):
         """  """
 
         self.driver.get("https://www.vietnamworks.com/my-profile")
@@ -1226,11 +1223,21 @@ class PythonOrgSearch(unittest.TestCase):
 
         self.assertTrue(TestUtil.checkTestcase(result,True,"TC-PM-022"))
 
-    def test_TC_PM_023(self):
+    def _test_TC_PM_023(self):
         self.driver.get("https://www.vietnamworks.com/my-career-center/dashboard")
-        WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((
+        
+        
+        button = WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((
             By.XPATH,
-            "//*[@id=\"profileUploadAttachForm\"]/div[1]/a"))).click() 
+            """//*[@id="profileUploadAttachForm"]/div[1]/a""")))
+        
+        self.driver.execute_script(
+        """
+            function getElementByXpath(path) {
+                return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            }
+            getElementByXpath("//*[@id='profileUploadAttachForm']/div[1]/a").click()
+        """)
 
         upload_cv_button = self.driver.find_element_by_class_name(
             "drag-drop-area")
@@ -1243,9 +1250,9 @@ class PythonOrgSearch(unittest.TestCase):
         delay(1)
         cv_file1 = os.path.join(self.input_files_path, "100kb.pdf")
         pyautogui.write(cv_file1)
-        delay(0.5)
+        delay(0.2)
         pyautogui.press('enter')
-        delay(2)
+        delay(4)
         result = "none"
         try:
             result = self.driver.find_element_by_css_selector(
