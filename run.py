@@ -21,6 +21,10 @@ def main():
     suite = unittest.makeSuite(PythonOrgSearch)
     test(suite)   
 
+    from JobSearch import PythonOrgSearch
+    suite = unittest.makeSuite(PythonOrgSearch)
+    test(suite)
+
 def test(suite):
     from pprint import pprint
     from io import StringIO
