@@ -27,7 +27,7 @@ class TestUtil:
     def get_sheet_name(i):
         switcher={
             'LI':'Log in',
-            'RE':'Log in',
+            'RE':'Register',
             'PM':'Profile management',
             'JO':'Jobs',
             'CV':'CV templates',
