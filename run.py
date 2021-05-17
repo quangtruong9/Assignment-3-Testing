@@ -6,24 +6,29 @@ def main():
     if PATH == "":
         raise Exception("Please input the path to your Chrome driver")
 
-    #test view salary
-    from ViewSalary import PythonOrgSearch
+    # #test view salary
+    # from ViewSalary import PythonOrgSearch
+    # suite = unittest.makeSuite(PythonOrgSearch)
+    # test(suite)
+
+    # test explore company
+    from ExploreCompany import PythonOrgSearch
     suite = unittest.makeSuite(PythonOrgSearch)
     test(suite)
 
-    #test jobs search
-    from JobSearch import PythonOrgSearch
-    suite = unittest.makeSuite(PythonOrgSearch)
-    test(suite)
+    # #test jobs search
+    # from JobSearch import PythonOrgSearch
+    # suite = unittest.makeSuite(PythonOrgSearch)
+    # test(suite)
 
-    #test CV
-    from CV import PythonOrgSearch
-    suite = unittest.makeSuite(PythonOrgSearch)
-    test(suite)
-    #test profile management
-    from ProfileManagement import PythonOrgSearch
-    suite = unittest.makeSuite(PythonOrgSearch)
-    test(suite)
+    # #test CV
+    # from CV import PythonOrgSearch
+    # suite = unittest.makeSuite(PythonOrgSearch)
+    # test(suite)
+    # #test profile management
+    # from ProfileManagement import PythonOrgSearch
+    # suite = unittest.makeSuite(PythonOrgSearch)
+    # test(suite)
 
 def test(suite):
     from pprint import pprint
