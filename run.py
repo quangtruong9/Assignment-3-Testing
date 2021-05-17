@@ -1,8 +1,11 @@
 import unittest
 
-PATH = "C:\Program Files (x86)\chromedriver.exe"
+PATH = ""
 
 def main():
+    if PATH == "":
+        raise Exception("Please input the path to your Chrome driver")
+
     #test view salary
     from ViewSalary import PythonOrgSearch
     suite = unittest.makeSuite(PythonOrgSearch)
