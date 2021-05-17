@@ -1,6 +1,6 @@
 import unittest
 
-PATH = ""
+PATH = ".\chromedriver.exe"
 
 def main():
     if PATH == "":
@@ -8,6 +8,10 @@ def main():
 
     #test view salary
     from ViewSalary import PythonOrgSearch
+    suite = unittest.makeSuite(PythonOrgSearch)
+    test(suite)
+
+    from JobSearch import PythonOrgSearch
     suite = unittest.makeSuite(PythonOrgSearch)
     test(suite)
 
