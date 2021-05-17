@@ -20,6 +20,10 @@ def main():
     from CV import PythonOrgSearch
     suite = unittest.makeSuite(PythonOrgSearch)
     test(suite)
+    #test profile management
+    from ProfileManagement import PythonOrgSearch
+    suite = unittest.makeSuite(PythonOrgSearch)
+    test(suite)
 
 def test(suite):
     from pprint import pprint
