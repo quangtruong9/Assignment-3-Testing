@@ -1,15 +1,16 @@
 # Assignment-3-Testing
 
-to install python library
+1. Install python library
 
 ```
  pip install -r requirements.txt
 
 ```
 
+2. run app
 
 ```
 python run.py
 ```
-to run app
+
 
