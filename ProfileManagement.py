@@ -1,22 +1,8 @@
-import sys
+
 import os
-import platform
-import json
-import re
-import hashlib
-import urllib
 from time import sleep as delay
 import pygetwindow as gw
 import pyautogui
-
-import validators
-import pandas as pd
-from datetime import datetime, date, timedelta
-from time import time
-from datetime import datetime
-from urllib.parse import urlsplit
-from urllib.parse import urlparse
-from urllib.parse import urljoin
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -27,13 +13,12 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.common.exceptions import ElementClickInterceptedException
-import selenium.common.exceptions
+
 from selenium.webdriver import ActionChains
 import logging
 from selenium.webdriver.remote.remote_connection import LOGGER
 LOGGER.setLevel(logging.WARNING)
 
-import xlwt
 from xlwt import Workbook
 import unittest
 import openpyxl 
